@@ -1,9 +1,12 @@
 @import url("https://discordstyles.github.io/Addons/windows-titlebar.css");
 
+/* === TransparentDiscordFR === */
+/* Ce thème rend Discord transparent avec des améliorations de compatibilité */
+
 :root {
     --background-primary: rgba(0, 0, 0, 0.5) !important;
-    --background-secondary: rgba(0, 0, 0, 0.3) !important;
-    --background-tertiary: rgba(0, 0, 0, 0.2) !important;
+    --background-secondary: rgba(0, 0, 0, 0.4) !important;
+    --background-tertiary: rgba(0, 0, 0, 0.3) !important;
     --background-floating: rgba(0, 0, 0, 0.6) !important;
 }
 
@@ -11,7 +14,7 @@
 .appMount-3lHmkl,
 .app-3xd6d0,
 .base-3dtUhz,
-.container-1NXEtd,
+.container-1wtJTd,
 .bg-1QIAus {
     background: transparent !important;
 }
@@ -24,6 +27,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(8px); /* Réduit l'intensité du flou */
+    background-color: rgba(0, 0, 0, 0.2); /* Ajoute une couche de fond */
     z-index: -1;
 }
+
+/* Alternative sans flou (au cas où ça pose problème) */
+/* .appMount-3lHmkl { */
+/*     background-color: rgba(0, 0, 0, 0.3) !important; */
+/* } */
