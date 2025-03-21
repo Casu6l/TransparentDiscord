@@ -1,38 +1,40 @@
-@import url("https://discordstyles.github.io/Addons/windows-titlebar.css");
+/**
+ * @name TransparentDiscordFR
+ * @description Rend Discord transparent avec un effet de flou.
+ * @author Casu6l
+ * @version 1.0.0
+ * @invite discord.gg/neverlandd
+ * @website https://github.com/Casu6l/TransparentDiscord.git
+ * @source https://casu6l.github.io/TransparentDiscord/TransparentDiscord.theme.css
+ * @authorId 1104081419015295036
+ */
+ @import url("https://discordstyles.github.io/Addons/windows-titlebar.css");
 
-/* === TransparentDiscordFR === */
-/* Ce thème rend Discord transparent avec des améliorations de compatibilité */
-
-:root {
-    --background-primary: rgba(0, 0, 0, 0.5) !important;
-    --background-secondary: rgba(0, 0, 0, 0.4) !important;
-    --background-tertiary: rgba(0, 0, 0, 0.3) !important;
-    --background-floating: rgba(0, 0, 0, 0.6) !important;
-}
-
-/* Rendre le fond principal transparent */
-.appMount-3lHmkl,
-.app-3xd6d0,
-.base-3dtUhz,
-.container-1wtJTd,
-.bg-1QIAus {
-    background: transparent !important;
-}
-
-/* Effet de flou pour une meilleure lisibilité */
-.appMount-3lHmkl::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(8px); /* Réduit l'intensité du flou */
-    background-color: rgba(0, 0, 0, 0.2); /* Ajoute une couche de fond */
-    z-index: -1;
-}
-
-/* Alternative sans flou (au cas où ça pose problème) */
-/* .appMount-3lHmkl { */
-/*     background-color: rgba(0, 0, 0, 0.3) !important; */
-/* } */
+ :root {
+     --background-primary: rgba(0, 0, 0, 0.5) !important;
+     --background-secondary: rgba(0, 0, 0, 0.3) !important;
+     --background-tertiary: rgba(0, 0, 0, 0.2) !important;
+     --background-floating: rgba(0, 0, 0, 0.1) !important;
+ }
+ 
+ /* Rendre le fond principal transparent */
+ .appMount-3lHmkl,
+ .base-3dtUhz,
+ .container-1rDyds,
+ .bg-1QIAus {
+     background: transparent !important;
+ }
+ 
+ /* Effet de flou pour une meilleure lisibilité */
+ .appMount-3lHmkl::before {
+     content: "";
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     backdrop-filter: blur(5px); /* Réduction du flou */
+     background: rgba(0, 0, 0, 0.2); /* Ajout d'un fond semi-transparent */
+     z-index: -1; /* S'assurer qu'il reste en arrière-plan */
+ }
+ 
